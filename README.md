@@ -192,3 +192,12 @@ Please refer to the specific endpoint details mentioned above for the expected r
 3. Start the mock server by running `npm run mock`.
 4. The mock server will be running on `http://localhost:8000`.
 
+services:
+  ht-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ht-frontend
+    image: rainbow-devs/ht-frontend
+    ports:
+      - "3000:3000"
